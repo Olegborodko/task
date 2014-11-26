@@ -2,7 +2,7 @@ class Lesson1Array
 
 	def initialize
 		#4 na 4
-		@mas=Array.new(4){ |index| Array.new(4){ |index| rand(-10..10) }  } 
+		@mas=Array.new(4){ Array.new(4){ rand(-10..10) }  } 
 
 	end
 

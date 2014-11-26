@@ -3,7 +3,7 @@ class Lesson1Array2
 	def initialize
 		@my_hash=Hash.new 
 		 
-		@my_array=Array.new(40){ |index| write_date }
+		@my_array=Array.new(40){ write_date }
 
 	end
 
@@ -33,7 +33,7 @@ class Lesson1Array2
 			date_month=value[3..4].to_s
 			temperature=value[value.length-4..value.length-1].to_s
 
-			if (@my_hash["#{date_month}"]==nil)
+			if (!@my_hash["#{date_month}"])
 				@my_hash["#{date_month}"]=[1,temperature]
 			else
 				@my_hash["#{date_month}"]=[(@my_hash["#{date_month}"][0]).to_i+1,(@my_hash["#{date_month}"][1]).to_i+temperature.to_i]
@@ -96,7 +96,7 @@ end
 
 my=Lesson1Array2.new()
 #my.write_date
-puts '='*100
+puts '='*30
 p my.my_array
 puts '----------------------'
 my.average_temperature
@@ -111,4 +111,4 @@ my.symbol_in_string({'yes' => 23, 'b' => 'travel',
 		key: [{'yes' => 23, 'b' => 'travel'}], 
 		'yesterday1' => 34,
  		'yesteryear' => 2014})
-puts '='*100
+puts '='*30

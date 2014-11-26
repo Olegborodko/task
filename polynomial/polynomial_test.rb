@@ -23,6 +23,11 @@ describe Polynomial do
     p.create_polynomial.should=="0"
   end
 
+  it "error" do
+   p=Polynomial.new([1,1])
+   expect { p.create_polynomial }.to raise_error
+  end
+
   
 end
  

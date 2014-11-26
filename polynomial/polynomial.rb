@@ -2,14 +2,15 @@ class Polynomial
 
 	def initialize(a)
 
-		if a.length<3
-			raise ArgumentError.new("Two or more coefficients are required")
-		end
-
 		@my_mas=a.reverse
 	end
 
 	def create_polynomial
+
+		if @my_mas.length<3
+			raise ArgumentError.new("Two or more coefficients are required")
+			#nil+1
+		end
 
 		step=0 #шаг и степень
 		my_print=''
